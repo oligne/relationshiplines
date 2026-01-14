@@ -1,4 +1,4 @@
-import ForceGraph3DView from '../components/ForceGraph3DView';
+import ForceGraph3DView from '../components/ForceGraph3DView.jsx';
 
 export default function TestGraphPage() {
   const users = [

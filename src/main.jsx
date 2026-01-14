@@ -5,7 +5,10 @@ import './globals.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+    <div style={{ color: 'red', fontSize: 32 }}>MAIN.JSX IS LOADING</div>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </>
 );

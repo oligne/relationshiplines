@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import ForceGraph3DView from '../components/ForceGraph3DView';
+import ForceGraph3DView from '../components/ForceGraph3DView.jsx';
 import { getUsers, createUser } from '../api/turso';
 
 export default function Home() {
@@ -49,33 +49,17 @@ export default function Home() {
       {error && (
         <div style={{ color: 'red', fontFamily: 'Menlo', margin: 16 }}>Erreur API: {error}</div>
       )}
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem', position: 'relative' }}>
-        <span className="title" style={{ fontSize: 20, textAlign: 'center' }}>what if everything was visible ?</span>
-        <button className="menu" style={{ position: 'absolute', right: 32, fontSize: 18 }} onClick={refresh}>refresh ↻</button>
-      </div>
-      <ForceGraph3DView users={users} me={me} onlineUsers={onlineUsers} />
-      <div style={{
-        position: 'fixed',
-        left: 16,
-        bottom: 16,
-        background: 'rgba(255,255,255,0.95)',
-        fontFamily: 'Menlo, monospace',
-        fontSize: 16,
-        color: '#000',
-        padding: '12px 18px 12px 12px',
-        borderRadius: 8,
-        boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-        zIndex: 1000,
-        minWidth: 120,
-        maxHeight: '40vh',
-        overflowY: 'auto',
-      }}>
-        {users.map(user => (
-          <div key={user.id} style={{ fontWeight: me?.id === user.id ? 700 : 400 }}>
-            /user/{user.pseudo}
-          </div>
-        ))}
-      </div>
+      <ForceGraph3DView
+        users={users}
+        me={me}
+        onlineUsers={onlineUsers}
+        onEdit={id => setEditId(id)}
+        editId={editId}
+        editValue={editValue}
+        onEditValueChange={e => setEditValue(e.target.value)}
+        onSave={savePseudo}
+        onRefresh={refresh}
+      />
     </main>
   );
 }
