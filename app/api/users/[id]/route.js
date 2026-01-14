@@ -1,4 +1,4 @@
-import { turso } from '@/lib/turso';
+import { turso } from '../../../../lib/turso';
 
 // PATCH pour modifier le nom
 export async function PATCH(request, { params }) {
