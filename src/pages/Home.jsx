@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import ForceGraph3DView from '../components/ForceGraph3DView.jsx';
-import { getUsers, createUser } from '../api/turso';
+import { getUsers, createUser } from '../api/turso.jsx';
 
 export default function Home() {
   const [users, setUsers] = useState([]);
