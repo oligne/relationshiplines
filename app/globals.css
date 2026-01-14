@@ -1,0 +1,8 @@
+/* Styles globaux */
+
+body {
+  margin: 0;
+  font-family: 'Fira Mono', monospace;
+  background: #fff;
+  color: #222;
+}
