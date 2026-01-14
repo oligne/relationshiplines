@@ -11,7 +11,8 @@ export default async function(req, res) {
       const result = await turso.execute('SELECT * FROM users ORDER BY id ASC');
       res.status(200).json(result.rows);
     } catch (e) {
-      res.status(500).json({ error: e.message });
+      console.error('API ERROR:', e); // Ajoute ce log
+      res.status(500).json({ error: e.message, stack: e.stack });
     }
   } else if (req.method === 'POST') {
     try {
@@ -31,7 +32,8 @@ export default async function(req, res) {
       });
       res.status(200).json(result.rows[0]);
     } catch (e) {
-      res.status(500).json({ error: e.message });
+      console.error('API ERROR:', e); // Ajoute ce log
+      res.status(500).json({ error: e.message, stack: e.stack });
     }
   } else {
     res.status(405).json({ error: 'Method not allowed' });
