@@ -6,7 +6,7 @@ const turso = createClient({
   authToken: process.env.TURSO_AUTH_TOKEN,
 });
 
-export default async function handler(req, res) {
+export default async function(req, res) {
   if (req.method === 'GET') {
     try {
       const result = await turso.execute('SELECT * FROM users ORDER BY id ASC');
