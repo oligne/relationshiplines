@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Menlo';
+  src: url('/assets/font/Menlo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ComputerPixel';
+  src: url('/assets/font/computer_pixel-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Menlo', monospace;
+  background: #ffeedd;
+}
