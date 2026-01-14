@@ -1,4 +1,3 @@
-// react_migration/api/users.js
 import { createClient } from '@libsql/client';
 
 const turso = createClient({

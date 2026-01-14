@@ -36,7 +36,7 @@ function MainPage() {
 
   async function savePseudo(id) {
     if (!editValue.trim()) return;
-    await fetch(`/api/users/${id}`, {
+    await fetch(`./api/users/${id}`, {
       method: 'PATCH',
       body: JSON.stringify({ pseudo: editValue }),
       headers: { 'Content-Type': 'application/json' },
