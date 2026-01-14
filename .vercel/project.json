@@ -1,1 +1,8 @@
-{"projectId":"prj_ZtdgsLVMiPPQC259OyusRyuiiYnx","orgId":"team_IdAt67Ujz5i9xpDdpdj5BaKC","projectName":"lineslines"}
+{
+  "projectId": "prj_ZtdgsLVMiPPQC259OyusRyuiiYnx",
+  "orgId": "team_IdAt67Ujz5i9xpDdpdj5BaKC",
+  "projectName": "lineslines",
+  "builds": [
+    { "src": "vite.config.js", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+  ]
+}
